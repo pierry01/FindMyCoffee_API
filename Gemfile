@@ -5,6 +5,7 @@ ruby '2.7.1'
 
 gem 'activerecord-postgis-adapter'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'jbuilder'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
