@@ -4,4 +4,8 @@ class Api::V1::GoogleStoresController < ApplicationController
       params[:latitude], params[:longitude]
     ).call
   end
+
+  def show
+    render json: GetGoogleCoffeeDetailsService.new(params[:id]).call
+  end
 end
