@@ -1,5 +1,10 @@
 Rails.application.configure do
   config.hosts << "bceae210c4474d57b9c1447169e51eae.vfs.cloud9.us-east-1.amazonaws.com"
+  
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+  end
 
   # Settings specified here will take precedence over those in config/application.rb.
 
