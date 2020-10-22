@@ -13,4 +13,12 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       headers: :any,
       methods: %i[get post put patch delete options head]
   end
+  
+  allow do
+    origins '6a3593cf422f48028730c7f94bfecad5.vfs.cloud9.us-east-1.amazonaws.com'
+
+    resource '*',
+      headers: :any,
+      methods: %i[get post put patch delete options head]
+  end
 end
