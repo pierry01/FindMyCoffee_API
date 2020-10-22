@@ -13,6 +13,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV.fetch('DATABASE_URL', '').sub(/^postgres/, "postgis") %>
   database: find_my_coffee_api_production
   username: find_my_coffee_api
   password: <%= ENV['FIND_MY_COFFEE_API_DATABASE_PASSWORD'] %>
