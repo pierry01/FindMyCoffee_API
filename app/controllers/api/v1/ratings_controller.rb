@@ -3,9 +3,9 @@ class Api::V1::RatingsController < ApplicationController
     ActiveRecord::Base.transaction do
       create_store
       create_rating
+
+      render json: @rating
     end
-    
-    render json: @rating
   end
 
   private
