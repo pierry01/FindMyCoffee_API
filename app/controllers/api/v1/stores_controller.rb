@@ -13,6 +13,10 @@ class Api::V1::StoresController < ApplicationController
   private
   
   def set_store
-    @store = Store.find_by!(google_place_id: params[:id])
+    begin
+      @store = Store.find_by!(google_place_id: params[:id])
+    rescue
+      head :no_content
+    end
   end
 end
